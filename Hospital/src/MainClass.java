@@ -1,4 +1,4 @@
 
 public class MainClass {
-	private int test=0;
+	private int test=1;
 }
