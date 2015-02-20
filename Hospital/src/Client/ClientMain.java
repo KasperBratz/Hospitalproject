@@ -14,11 +14,13 @@ public class ClientMain {
 		try {
 		SSLSocket socket = Client.clientSocketFactory();
 		socket.startHandshake();
-		
-		GUI gui = new GUI();
-		
 		PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
         BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+		Sender sender = new Sender(in, out);
+        
+		GUI gui = new GUI();
+		
+		
 		
         in.close();
 		out.close();

@@ -5,6 +5,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.PrintWriter;
 import java.util.EventListener;
 
 import javax.swing.JButton;
@@ -24,9 +25,7 @@ public class GUI extends JFrame implements ActionListener{
 	
 	
 	public GUI(){
-		
 		setup();
-		
 	}
 
 	private void initiatePanels() {
@@ -81,7 +80,6 @@ public class GUI extends JFrame implements ActionListener{
 		if(e.getSource()==loginButton){
 			String userName = nameField.getText();
 			String userPassword = passwordField.getText();
-			
 		}
 	}
 	

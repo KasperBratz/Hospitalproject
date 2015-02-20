@@ -10,7 +10,7 @@ import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManagerFactory;
 
 public class Client {
-	private static String host = "localhost";
+	private static String host = "venus-6";
 	private static int port = 9876;
 
 	public static SSLSocket clientSocketFactory(){
