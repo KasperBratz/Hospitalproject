@@ -81,8 +81,6 @@ public class GUI extends JFrame implements ActionListener{
 		if(e.getSource()==loginButton){
 			String userName = nameField.getText();
 			String userPassword = passwordField.getText();
-			nameField.setText("" );
-			passwordField.setText("");
 			
 		}
 	}
