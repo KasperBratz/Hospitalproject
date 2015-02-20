@@ -79,7 +79,9 @@ public class GUI extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()==loginButton){
-			nameField.setText(" " );
+			String userName = nameField.getText();
+			String userPassword = passwordField.getText();
+			nameField.setText("" );
 			passwordField.setText("");
 			
 		}
