@@ -1,6 +1,6 @@
 
 public class MainClass {
-	private int test=2;
+	private int testt=2;
 	
 	
 }
