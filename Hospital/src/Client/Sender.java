@@ -18,11 +18,9 @@ public class Sender {
 		//this.out.close();
 	}
 	public String msg() {
-		// TODO Auto-generated method stub
 		try {
 			return in.readLine();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			return "error";
 		}
 	}
