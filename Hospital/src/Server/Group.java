@@ -21,4 +21,8 @@ public enum Group {
 	public String getGID(){
 		return GID;
 	}
+	
+	private boolean equals(Group other) {
+		return this.GID.equals(other.GID);
+	}
 }
