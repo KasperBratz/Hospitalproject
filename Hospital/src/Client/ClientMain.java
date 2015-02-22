@@ -15,6 +15,7 @@ public class ClientMain {
 		SSLSocket socket = Client.clientSocketFactory();
 		socket.startHandshake();
 		PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+		out.flush();
         BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 		Sender sender = new Sender(in, out);
         
