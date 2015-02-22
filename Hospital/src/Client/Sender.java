@@ -12,11 +12,19 @@ public class Sender {
 		this.in = in;
 		this.out = out;
 	}
+	/**
+	 * Sends the string out to the server.
+	 * @param out
+	 */
 	public void push(String out){
 		System.out.println("sendeing:" +out);
 		this.out.println(out);
 		//this.out.close();
 	}
+	/**
+	 * 
+	 * @return The last string send by the server
+	 */
 	public String msg() {
 		try {
 			return in.readLine();

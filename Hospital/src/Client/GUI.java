@@ -50,7 +50,6 @@ public class GUI extends JFrame implements ActionListener{
 		buttonPanel.add(loginButton, BorderLayout.CENTER);
 		loginButton.addActionListener(this);
 		
-		
 	}
 
 	private void addPanels() {
