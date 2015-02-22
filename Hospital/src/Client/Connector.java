@@ -9,7 +9,7 @@ import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManagerFactory;
 
-public class Client {
+public class Connector {
 	private static String host = "venus-6";
 	private static int port = 9876;
 

@@ -12,7 +12,7 @@ public class ClientMain {
 	
 	public static void main (String args[]){
 		try {
-		SSLSocket socket = Client.clientSocketFactory();
+		SSLSocket socket = Connector.clientSocketFactory();
 		socket.startHandshake();
 		PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 		out.flush();
