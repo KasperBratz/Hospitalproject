@@ -41,7 +41,7 @@ public class Server implements Runnable {
 					+ subject);
 			System.out.println(numConnectedClients
 					+ " concurrent connection(s)\n");
-
+			
 			PrintWriter out = null;
 			BufferedReader in = null;
 			out = new PrintWriter(socket.getOutputStream(), true);
@@ -49,7 +49,7 @@ public class Server implements Runnable {
 					socket.getInputStream()));
 
 			String clientMsg = null;
-			while ((clientMsg = in.readLine()) != null) {
+			while ((clientMsg = in.readLine()) != null||socket.isClosed()) {
 				String rev = new StringBuilder(clientMsg).toString();
 				System.out.println(rev);
 				if(rev.charAt(0)=='0'){

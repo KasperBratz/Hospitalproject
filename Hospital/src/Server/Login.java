@@ -36,7 +36,11 @@ public class Login {
 	}
 	
 	public boolean checkAccess(String uid, String password){
+		
 		String hash=logins.get(uid);
+		if(hash==null){
+			return false;
+		}
 		String pass;
 		try {
 			pass = Sha.hash256(password, hash.substring(0, 10));

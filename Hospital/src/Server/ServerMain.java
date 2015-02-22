@@ -15,6 +15,8 @@ import javax.net.ssl.TrustManagerFactory;
 
 
 public class ServerMain {
+	
+	
 	// JDBC driver name and database URL
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
 	static final String DB_URL = "jdbc:mysql://localhost/EMP";
@@ -28,19 +30,19 @@ public class ServerMain {
 		
 		Connection conn = null;
 		try{
-			Class.forName("com.mysql.jdbc.Driver");
+			//Class.forName("com.mysql.jdbc.Driver");
 			
-			System.out.println("Connecting to database...");
-			conn = DriverManager.getConnection(DB_URL,USER,PASS);
+//			System.out.println("Connecting to database...");
+//			conn = DriverManager.getConnection(DB_URL,USER,PASS);
 			
 			System.out.println("Listening...");
 			Login log = new Login();
 			new Server(log);
 			
-			conn.close();
-		}catch(SQLException e){
-			System.out.println("Unable to conenct to the Database: " + e.getMessage());
-			e.printStackTrace();
+			//conn.close();
+//		}catch(SQLException e){
+//			System.out.println("Unable to conenct to the Database: " + e.getMessage());
+//			e.printStackTrace();
 		}catch (IOException e){
             System.out.println("Unable to start Server: " + e.getMessage());
             e.printStackTrace();
