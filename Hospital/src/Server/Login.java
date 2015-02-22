@@ -39,10 +39,12 @@ public class Login {
 		
 		String hash=logins.get(uid);
 		if(hash==null){
+			System.out.println("hej");
 			return false;
 		}
 		String pass;
 		try {
+			System.out.println(hash.substring(0, 10)+" "+password);
 			pass = Sha.hash256(password, hash.substring(0, 10));
 		} catch (NoSuchAlgorithmException e) {
 			return false;

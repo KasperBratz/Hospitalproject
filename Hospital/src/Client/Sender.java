@@ -12,16 +12,22 @@ public class Sender {
 		this.in = in;
 		this.out = out;
 	}
+	/**
+	 * Sends the string out to the server.
+	 * @param out
+	 */
 	public void push(String out){
 		System.out.println("sending:" +out);
 		this.out.println(out);
 	}
+	/**
+	 * 
+	 * @return The last string send by the server
+	 */
 	public String msg() {
-		// TODO Auto-generated method stub
 		try {
 			return in.readLine();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			return "error";
 		}
 	}

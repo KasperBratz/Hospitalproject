@@ -3,6 +3,13 @@ package Server;
 import java.security.*;
 
 public class Sha {
+	/**
+	 * Returns the SHA-256 hash of the salt and data
+	 * @param data the password
+	 * @param salt salt that belong to the password
+	 * @return 
+	 * @throws NoSuchAlgorithmException
+	 */
 	public static String hash256(String data,String salt) throws NoSuchAlgorithmException {
 		MessageDigest md = MessageDigest.getInstance("SHA-256");
 		md.update((salt+data).getBytes());
