@@ -3,23 +3,27 @@ package Server;
 import java.sql.*;
 
 public class Database extends AbstractDatabase{
-	private static Connection conn;
+	private Connection conn;
 	
-	public Database(){
-		super(conn);
+	public Database(Connection _conn){
+		conn = _conn;
 	}
 
 	@Override
-	public boolean insert(String table, String add) {
-		// TODO Auto-generated method stub
-		return false;
+	public void test() {
+		try{
+			Statement stmt = null;
+			stmt = conn.createStatement();
+			String sql;
+			sql = "select * from users";
+			ResultSet rs = stmt.executeQuery(sql);
+			
+			while(rs.next()){
+				System.out.println("Dump: "+rs.getString("name"));
+			}
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 	}
-
-	@Override
-	public boolean delete(String table, String field, String target) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	
-	
 }
