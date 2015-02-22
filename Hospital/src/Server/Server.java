@@ -51,6 +51,7 @@ public class Server implements Runnable {
 			String clientMsg = null;
 			while ((clientMsg = in.readLine()) != null) {
 				String rev = new StringBuilder(clientMsg).toString();
+				System.out.println(rev);
 				if(rev.charAt(0)=='0'){
 					String[] s=rev.split("\t",3);
 					boolean b=log.checkAccess(s[2],s[3]);
