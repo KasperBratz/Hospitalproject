@@ -1,5 +1,8 @@
 package Authentication;
 
+import Authentication.ACL.AccessRight;
+import Authentication.ACL.AccessType;
+import Authentication.ACL.PrincipalType;
 import Server.Group;
 
 public class ACE {
@@ -8,18 +11,6 @@ public class ACE {
 	private AccessRight accessRight;
 	private String UID;
 	private Group group;
-	
-	public static enum AccessType{
-		Allow, Deny
-	}
-	
-	public static enum PrincipalType{
-		UID, GID,
-	}
-	
-	public static enum AccessRight{
-		Read, Write, 
-	}
 	
 	public ACE(AccessType accessType, AccessRight accessRight, String UID){
 		this.accessType = accessType;
