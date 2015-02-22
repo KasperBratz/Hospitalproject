@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
 public class Login {
@@ -35,8 +36,15 @@ public class Login {
 	}
 	
 	public boolean checkAccess(String uid, String password){
-		String pass = logins.get(uid);
-		if(pass.compareTo(password)==0){
+		String hash=logins.get(uid);
+		String pass;
+		try {
+			pass = Sha.hash256(password, hash.substring(0, 10));
+		} catch (NoSuchAlgorithmException e) {
+			return false;
+		}
+		
+		if(pass.equals(hash.substring(10))){
 			return true;
 		}
 		return false;
