@@ -14,8 +14,7 @@ public class Sender {
 	}
 	public void push(String out){
 		System.out.println("sendeing:" +out);
-		this.out.write(out);
-		this.out.flush();
+		this.out.println(out);
 	}
 	public String msg() {
 		// TODO Auto-generated method stub

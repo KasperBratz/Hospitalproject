@@ -1,10 +1,12 @@
 package Server;
 
+import java.sql.*;
+
 public class LoggingDatabase extends AbstractDatabase{
-	
+	private static Connection conn;
 	
 	public LoggingDatabase(){
-		
+		super(conn);
 	}
 
 	@Override
