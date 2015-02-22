@@ -13,7 +13,7 @@ public class Sender {
 		this.out = out;
 	}
 	public void push(String out){
-		System.out.println("sendeing:" +out);
+		System.out.println("sending:" +out);
 		this.out.println(out);
 	}
 	public String msg() {

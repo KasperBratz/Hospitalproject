@@ -19,8 +19,6 @@ public class ServerMain {
 		System.out.println("\nServer Started\n");
 		AbstractDatabase db = new Database();
 		
-		
-		
 		try{
 			System.out.println("Listening...");
 			Login log = new Login();
