@@ -38,8 +38,4 @@ public class AccessEvaluator {
 		}
 		return false;
 	}
-	
-	public void emptyToCommit(){
-		
-	}
 }
