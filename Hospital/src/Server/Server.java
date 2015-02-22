@@ -54,7 +54,8 @@ public class Server implements Runnable {
 				System.out.println(rev);
 				if(rev.charAt(0)=='0'){
 					String[] s=rev.split("\t",3);
-					boolean b=log.checkAccess(s[2],s[3]);
+					System.out.println(s[1]+s[2]);
+					boolean b=log.checkAccess(s[1],s[2]);
 					out.println(b);
 					//hämta alla filer
 				}else if(rev.charAt(0)=='1'){

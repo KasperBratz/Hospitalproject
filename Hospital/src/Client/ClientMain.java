@@ -15,18 +15,18 @@ public class ClientMain {
 		SSLSocket socket = Connector.clientSocketFactory();
 		socket.startHandshake();
 		PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-		out.flush();
+		//out.flush();
         BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 		Sender sender = new Sender(in, out);
         
-		GUI gui = new GUI();
+		GUI gui = new GUI(sender);
 		
 		
 		
-        in.close();
+        /*in.close();
 		out.close();
         socket.close();
-        
+        */
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -22,10 +22,11 @@ public class GUI extends JFrame implements ActionListener{
 	private JLabel header, username, password;
 	private JTextField nameField, passwordField;
 	JButton loginButton;
+	private Sender sender;
 	
-	
-	public GUI(){
+	public GUI(Sender sender){
 		setup();
+		this.sender=sender;
 	}
 
 	private void initiatePanels() {
@@ -80,6 +81,8 @@ public class GUI extends JFrame implements ActionListener{
 		if(e.getSource()==loginButton){
 			String userName = nameField.getText();
 			String userPassword = passwordField.getText();
+			sender.push("0\t"+userName+"\t"+userPassword);
+			System.out.println(sender.msg());
 		}
 	}
 	
